@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day-to-Day Expenses</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <style>
+    /* Custom CSS for this page */
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the header */
+    h1 {
+      background-color: #4CAF50; /* Green background */
+      color: #fff; /* White text */
+      padding: 10px; /* Add spacing around the header content */
+    }
+
+    /* Style the tabs */
+    .tabs {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+
+    .tabs li {
+      margin: 0 10px;
+    }
+
+    /* Style the date navigation buttons */
+    .date-navigation {
+      margin-top: 20px;
+    }
+
+    /* Style the expenses list */
+    #expenses-list {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    /* Style the balance section */
+    #balance {
+      margin-top: 20px;
+    }
+
+    /* Style the add expense button */
+    #add-expense {
+      background-color: #4CAF50; /* Green background */
+      color: #fff; /* White text */
+      font-size: 24px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    #add-expense:hover {
+      background-color: #45a049; /* Slightly darker green on hover */
+    }
+
+    /* Style the pop-up modal */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style the pop-up form */
+    .popup-content form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Day to Day Expenses</h1>
+  <div>
+    <ul class="tabs">
+      <li><a href="#" id="notes-tab">Notes</a></li>
+      <li><a href="#" id="daily-tab">Daily</a></li>
+      <li><a href="#" id="monthly-tab">Monthly</a></li>
+      <li><a href="#" id="yearly-tab">Yearly</a></li>
+    </ul>
+  </div>
+  <div class="date-navigation">
+    <button id="prev-date">&lt; Previous Date</button>
+    <span id="selected-date">Date</span>
+    <button id="next-date">Next Date &gt;</button>
+  </div>
+  <div id="balance">
+    <p>Balance: $<span id="balance-amount">0.00</span></p>
+</div>
+  
+  <div id="expenses-list">
+    <!-- Display expenses for the selected tab and date -->
+  </div>
+  <div id="balance">
+    <p>Total Income (Credit): $<span id="total-income">0.00</span></p>
+    <p>Total Expense (Debit): $<span id="total-expense">0.00</span></p>
+  </div>
+  <button id="add-expense">+</button>
+  <!-- Pop-up modal for adding income and expenses -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Add Income/Expense</h2>
+      <form id="transaction-form">
+        <label for="transaction-type">Transaction Type:</label>
+        <select id="transaction-type">
+          <option value="income">Income (Credit)</option>
+          <option value="expense">Expense (Debit)</option>
+        </select>
+        <br><br>
+        <label for="transaction-description">Description:</label>
+        <input type="text" id="transaction-description" placeholder="Enter description">
+        <br><br>
+        <label for="transaction-amount">Amount:</label>
+        <input type="number" id="transaction-amount" step="0.01" placeholder="Enter amount">
+        <br><br>
+        <button id="add-transaction">Add</button>
+        <button id="cancel-transaction">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <script src="/js/day-expenses.js"></script>
+</body>
+</html>

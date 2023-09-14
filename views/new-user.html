@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Registration - Day-To-Day Expenses</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Day-To-Day Expenses</h1>
+    </header>
+    <div class="container">
+        <h2>Create a New User Account</h2>
+        <form id="registration-form">
+            
+            <div class="profile-picture">
+                <label for="profile-picture">Profile Picture:</label>
+                <input type="file" id="profile-picture">
+                <div id="profile-picture-preview" class="profile-picture-preview">
+                    <!-- Chosen profile picture will be displayed here -->
+                </div>
+            </div>
+            
+            <div class="profile-name">
+                <label for="profile-name">Profile Name:</label>
+                <input type="text" id="profile-name" placeholder="Enter your profile name" required>
+            </div>
+            <div class="password">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="additional-info">
+                <label for="additional-info">Additional Information:</label>
+                <textarea id="additional-info" rows="4" placeholder="Enter additional information"></textarea>
+            </div>
+            <div class="user-actions">
+                <button id="Next-button">Next</button>
+                
+            </div>
+        </form>
+    </div>
+    <script src="/js/new-user.js"></script>
+</body>
+</html>

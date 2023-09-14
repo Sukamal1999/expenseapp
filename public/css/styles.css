@@ -1,0 +1,92 @@
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: Arial, sans-serif;
+}
+
+.container-wrapper {
+  background-color: #000; /* Black background for the elevation */
+  padding: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
+}
+
+/* Style the container with a black border and white background */
+.container {
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px; /* Add spacing around the container content */
+  background-color: #fff; /* White container background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  border: 1px solid #000; /* Add a 1px solid black border */
+  border-radius: 10px; /* Add rounded corners to the container */
+}
+
+/* Style the header area inside the container */
+/* Style the header area inside the container */
+/* Style the header area inside the container */
+header {
+  max-width: 840px; /* Set to match the container's max-width */
+  margin: 0 auto; /* Center horizontally within the screen */
+  background-color: #4CAF50; /* Green background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 20px 0; /* Add some spacing around the header content */
+  border-top-left-radius: 10px; /* Adjust the border radius */
+  border-top-right-radius: 10px; /* Adjust the border radius */
+  margin-bottom: 20px; /* Add spacing below the header */
+}
+
+
+
+/* Center the container div in the middle of the page */
+.currency-section, .user-actions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the buttons */
+button {
+  background-color: #4CAF50; /* Green background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Add rounded corners to the buttons */
+  margin-right: 10px; /* Add spacing between buttons */
+  transition: background-color 0.3s ease; /* Smooth button background transition */
+}
+
+button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Style the currency dropdown */
+#currency-dropdown {
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* Circular frame for profile picture */
+.profile-picture-preview {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Hide overflowing parts of the image */
+  display: inline-block; /* Make it an inline-block element */
+  vertical-align: middle; /* Vertically center it */
+  margin-left: 10px; /* Add spacing between the label and the profile picture */
+}
+
+.profile-picture-preview img {
+  width: 100%; /* Ensure the image fills the circular frame */
+  height: 100%; /* Ensure the image fills the circular frame */
+  object-fit: cover; /* Scale the image to cover the entire frame */
+}
